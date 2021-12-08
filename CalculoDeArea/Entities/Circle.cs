@@ -10,7 +10,7 @@ namespace CalculoDeArea.Entities
     {
         public double Radius { get; private set; }
 
-        public Circle(double radius)
+        public Circle(double radius, Color color):base( color)
         {
             Radius = radius;
         }

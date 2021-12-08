@@ -26,19 +26,20 @@ class Program
                 width = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 Console.Write("Height:");
                 height = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                shapes.Add(new Rectangle(width, height));
+                shapes.Add(new Rectangle(width, height, color));
             }
             else
             {
                 Console.Write("Radius");
                 double radius = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                shapes.Add(new Circle(radius));
+                shapes.Add(new Circle(radius, color));
             }
         }
         Console.WriteLine("shape Areas:");
         foreach (Shape shape in shapes)
         {
             Console.WriteLine(shape.Area().ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine(shape.Color);
         }
     }
 }
